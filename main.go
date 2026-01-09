@@ -2,47 +2,30 @@ package main
 
 import "fmt"
 
-var outside = "you can't use := outside function"
-
-// Dingdong := "hello"
-
 func main() {
+	age := 20
+	name := "Saurav"
+	//print
+	fmt.Print("Hello, ")
 
-	// strings
-	var nameOne string = "mario"
-	var nameTwo = "Luigi"
-	var nameThree string
+	fmt.Print("World! \n")
+	fmt.Print("new line\n")
+	// println
+	fmt.Println("Hello guys")
+	fmt.Println("Bye guys")
+	fmt.Println("My age is", age, "and my name is", name)
 
-	fmt.Println(nameOne, nameTwo, nameThree)
+	// printf (formatted strings) %_ = format specifier
+	fmt.Printf("My name is %v and my age is %v\n", name, age)
+	// %q for quote, but for integer it doesn't work
+	fmt.Printf("My name is %q and my age is %q\n", name, age)
+	fmt.Printf("Age is of type %T\n", age)
 
-	nameOne = "peach"
-	nameThree = "Browser"
+	//float
+	fmt.Printf("The score is %0.2f \n", 255.22)
 
-	fmt.Println(nameOne, nameTwo, nameThree)
-
-	nameFour := "yoshi"                                //At terminal
-	fmt.Println(nameOne, nameTwo, nameThree, nameFour) //go run main.go
-
-	//int
-	var ageOne int = 20
-	var ageTwo = 30
-	ageThree := 40
-
-	fmt.Println(ageOne, ageTwo, ageThree)
-
-	// bits & memory
-	var numOne int8 = 25
-	var numTwo int8 = -128
-	var numThree uint8 = 30
-
-	fmt.Println(numOne, numTwo, numThree)
-
-	// float
-	var scoreOne float32 = 23323.3
-	var scoreTwo float64 = 34534534.54
-
-	scoreThree := 342343.45
-
-	fmt.Println(scoreOne, scoreTwo, scoreThree)
+	//sprintf save formatted string
+	var str = fmt.Sprintf("My name is %v and my age is %v\n", name, age)
+	fmt.Println("The saved string is: ", str)
 
 }
